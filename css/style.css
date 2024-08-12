@@ -1,0 +1,423 @@
+/* Ensure global styles apply */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Root variables for themes */
+:root {
+  --background-color: aliceblue;
+  --text-color: black;
+  --primary-color: rgb(47, 79, 224);
+  --secondary-color: rgba(0, 0, 0, 0.1);
+  --card-background: white;
+}
+
+body.dark-theme {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --primary-color: #bb86fc;
+  --secondary-color: rgba(255, 255, 255, 0.1);
+  --card-background: #1e1e1e;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Navigation section */
+.header {
+  position: fixed;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-shadow: 0 3px 5px var(--secondary-color);
+  background-color: var(--background-color);
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  font-size: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px; /* Adjusted for better spacing */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  margin-right: 20px; /* Adjusted for better spacing */
+  font-size: 20px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.end-nav {
+  margin-right: 20px; /* Adjusted for better spacing */
+}
+
+/* Hero section (not used here, but for completeness) */
+span {
+  color: var(--primary-color);
+}
+
+.home-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.user-image {
+  background-color: var(--primary-color);
+  height: 500px;
+  width: 500px;
+  border-radius: 40% 90% 40% 100%;
+  margin-right: 150px;
+  display: grid;
+  grid-row-start: 1;
+}
+
+/* About section */
+.card {
+  margin: 20px; /* Adjusted for responsive margins */
+  padding: 20px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px var(--secondary-color);
+}
+
+.title {
+  padding-top: 5%;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px; /* Space between image and text */
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-txt {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Skills section (for completeness) */
+.skills-card {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  justify-content: center;
+  gap: 50px;
+  padding-top: 20px;
+}
+
+.skill-item {
+  display: grid;
+  justify-content: center;
+}
+
+/* Projects section (for completeness) */
+.projects-card {
+  box-shadow: 10px 10px 10px var(--secondary-color);
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.projects-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.projects-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Contact section (for completeness) */
+.contact-body {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.contact-card {
+  box-shadow: 10px 10px 10px var(--secondary-color);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+/* Footer section */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 20px;
+  background-color: var(--card-background);
+  box-shadow: 0 -3px 5px var(--secondary-color);
+}
+
+.footer-body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Theme switcher */
+.theme-switcher {
+  display: inline-block;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+#theme-toggle {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  background-color: #555;
+}
+
+.dark-theme #theme-toggle {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-theme #theme-toggle:hover {
+  background-color: #ddd;
+}
+
+/* Form Styles */
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  visibility: hidden;
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+  border-color: #d93025;
+}
+
+input:focus:valid,
+textarea:focus:valid {
+  border-color: var(--primary-color);
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: #d93025;
+}
+
+input,
+textarea {
+  border: 1px solid var(--secondary-color);
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px rgba(47, 79, 224, 0.2);
+}
+
+body.dark-theme input:invalid,
+body.dark-theme textarea:invalid {
+  border-color: #bb86fc;
+}
+
+body.dark-theme .error-message {
+  color: #cf6679;
+}
+
+/* Quiz Container */
+.quiz-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-radius: 10px;
+}
+
+/* Header */
+.quiz-header {
+  padding-top: 5%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-header h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.quiz-header p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+/* Questions */
+.question {
+  margin-bottom: 20px;
+}
+
+.question h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Answer Options */
+.answer-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.answer-options li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  white-space: nowrap; /* Ensure text doesn't wrap */
+}
+
+.answer-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Align radio buttons in a column */
+.answer-options label {
+  display: flex;
+  align-items: center;
+}
+
+.answer-options label input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--card-background);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: darken(var(--primary-color), 10%);
+  color: var(--card-background);
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(47, 79, 224, 0.3); /* Slight shadow for focus */
+}
+
+/* Score Card */
+.score-card {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.score-card h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+/* Hide the nav menu by default on small screens */
+#navbar {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  position: absolute;
+  width: 100%;
+  top: 60px; /* Adjust based on your header height */
+  left: 0;
+  z-index: 1000;
+}
+
+/* Show the nav menu when active */
+#navbar.active {
+  display: flex;
+}
+
+/* Style the menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--text-color);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}

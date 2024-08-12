@@ -1,0 +1,271 @@
+/* responsiveness */
+
+/* Mobile devices (max-width: 425px) */
+@media only screen and (max-width: 425px) {
+  /* Navigation */
+  .header {
+    position: fixed;
+    flex-direction: column;
+    gap: 10px; /* Adjusted for spacing */
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+
+  nav {
+    margin-left: 10px;
+  }
+
+  .navbar > * {
+    margin-right: 30px;
+    font-size: 15px;
+  }
+
+  .end-nav {
+    margin-right: 0; /* Adjusted for spacing */
+  }
+
+  /* Hero */
+  .home-body {
+    padding: 200px 20px 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Adjusted for dynamic content height */
+  }
+
+  .user-image {
+    height: 250px;
+    width: 250px;
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .heading {
+    width: 300px;
+    justify-content: center; /* Centered heading */
+    margin-left: 0; /* Adjusted margin for mobile */
+    padding-top: 20px; /* Adjusted padding */
+  }
+
+  /* About */
+  .card {
+    margin-left: 10px; /* Adjusted for spacing */
+    margin-right: 10px;
+    padding-top: 50px; /* Adjusted for mobile */
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .about-content {
+    grid-template: 1fr / 1fr;
+  }
+
+  .about-txt {
+    font-size: 15px;
+    width: 100%; /* Adjusted for full width */
+  }
+
+  .about-image {
+    height: 250px; /* Adjusted for mobile */
+    width: 250px; /* Adjusted for mobile */
+  }
+
+  /* Skills */
+  .skills-card {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+
+  .skill-image {
+    height: 100px;
+  }
+
+  /* Projects */
+  .projects-body {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .projects-card {
+    width: 100%; /* Full width for mobile */
+    max-width: 350px; /* Max width */
+  }
+
+  .project-image {
+    height: 150px;
+  }
+
+  /* Contact */
+  .contact-img {
+    height: 50px;
+  }
+}
+
+/* Tablets and small desktops (426px to 768px) */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  /* Navigation */
+  .header {
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .navbar > * {
+    margin-right: 30px;
+    font-size: 15px;
+  }
+
+  .end-nav {
+    margin-right: 20px;
+  }
+
+  /* Hero */
+  .home-body {
+    padding: 90px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: auto; /* Adjusted for dynamic content height */
+  }
+
+  .user-image {
+    height: 250px;
+    width: 250px;
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .heading {
+    width: 300px;
+    justify-content: center; /* Centered heading */
+    margin-left: 0; /* Adjusted margin */
+    padding-top: 20px; /* Adjusted padding */
+  }
+
+  /* About */
+  .card {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 50px; /* Adjusted for tablet */
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .about-content {
+    grid-template: 1fr / 1fr 1fr;
+  }
+
+  .about-txt {
+    font-size: 15px;
+    width: 100%; /* Full width for tablets */
+  }
+
+  .about-image {
+    height: 350px;
+    width: 350px;
+  }
+
+  /* Skills */
+  .skills-card {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  }
+
+  .skill-image {
+    height: 100px;
+  }
+
+  /* Projects */
+  .projects-body {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .projects-card {
+    width: 100%; /* Full width for tablets */
+    max-width: 400px; /* Max width */
+  }
+
+  .project-image {
+    height: 200px;
+  }
+
+  /* Contact */
+  .contact-img {
+    height: 50px;
+  }
+}
+
+/* Desktops and larger screens (729px to 1440px) */
+@media only screen and (min-width: 729px) and (max-width: 1440px) {
+  .home-body {
+    justify-content: space-between;
+  }
+
+  .projects-body {
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+}
+
+/*for Football Quiz */
+@media only screen and (max-width: 425px) {
+  #football-quiz {
+    margin: 10px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .question p {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Show the menu toggle button on small screens */
+@media only screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .header {
+    position: relative;
+  }
+}
