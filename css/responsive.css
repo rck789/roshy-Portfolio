@@ -269,3 +269,21 @@
     position: relative;
   }
 }
+
+/* Show the nav menu by default on larger screens */
+@media only screen and (min-width: 769px) {
+  #navbar {
+    display: flex;
+    position: static; /* Remove absolute positioning */
+    flex-direction: row; /* Arrange items in a row */
+    width: auto; /* Adjust width to content */
+    top: auto;
+    left: auto;
+    background-color: transparent; /* Optional: make background transparent */
+  }
+
+  /* Hide the hamburger menu on larger screens */
+  .menu-toggle {
+    display: none;
+  }
+}
